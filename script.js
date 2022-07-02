@@ -14,7 +14,17 @@ function divide(n, m) {
     return n / m;
 }
 
-console.log(add(5,2));
-console.log(subtract(5,2));
-console.log(multiply(5,2));
-console.log(divide(5,2));
+function operate(operator, n, m) {
+    switch(operator) {
+        case "add":
+            return add(n, m);
+        case "subtract":
+            return subtract(n, m);
+        case "multiply":
+            return multiply(n, m);
+        case "divide":
+            return divide(n, m);
+        default:
+            break;
+    }
+}
