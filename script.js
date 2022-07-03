@@ -1,3 +1,5 @@
+let display;
+
 function add(n, m) {
     return n + m;
 }
@@ -27,4 +29,10 @@ function operate(operator, n, m) {
         default:
             break;
     }
+}
+
+function click_num_display(id) {
+    display = id;
+    if(document.getElementById('screen-contents').innerHTML != '0') document.getElementById('screen-contents').innerHTML += display;
+    else document.getElementById('screen-contents').innerHTML = display;
 }
